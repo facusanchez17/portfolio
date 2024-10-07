@@ -1,9 +1,12 @@
 <section
+    id="inicio"
     class="bg-center bg-cover bg-no-repeat bg-[#211b439c] bg-blend-multiply"
 >
-    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+    <div
+        class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 blur-in-expand"
+    >
         <p
-            class="mb-2 text-lg font-normal text-gray-300 lg:text-2xl sm:px-16 lg:px-48" 
+            class="mb-2 text-lg font-normal text-gray-300 lg:text-2xl sm:px-16 lg:px-48"
         >
             Hola mi nombre es
         </p>
@@ -17,14 +20,25 @@
         >
             Ingeniero en Sistemas
         </p>
-        <div
-            class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
-        >
-        </div>
     </div>
 </section>
 
 <style>
+    .blur-in-expand {
+        animation: blur-in-expand 0.4s linear both;
+    }
+    @keyframes blur-in-expand {
+        0% {
+            transform: scale(0);
+            filter: blur(12px);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
     section {
         background-image: url(../imgs/fondo.jpg);
         background-size: cover;
